@@ -447,6 +447,7 @@ export default function BodyComponent() {
               </Link>
             </Label>
 
+							<div style={{display: 'flex'}} >
             {selectedWidget === 'wanted' &&
               ui.meInfo &&
               ui.meInfo?.owner_alias && (
@@ -472,7 +473,7 @@ export default function BodyComponent() {
                   >
                     +
                   </div>
-                </>
+											</>
               )}
 
             <SearchTextInput
@@ -492,6 +493,7 @@ export default function BodyComponent() {
                 ui.setSearchText(e);
               }}
             />
+							</div>
           </div>
 
           <div style={{ width: '100%' }}>
@@ -644,7 +646,7 @@ export default function BodyComponent() {
           >
             {selectedWidget === 'wanted' &&
               (ui.meInfo && ui.meInfo?.owner_alias ? (
-                <>
+
                   <div
                     style={{
                       fontSize: '15px',
@@ -662,12 +664,9 @@ export default function BodyComponent() {
                       setShowFocusView(true);
                     }}
                   >
-                    {' '}
                     Create Ticket
                   </div>
-                </>
               ) : (
-                <>
                   <div
                     style={{
                       padding: '10px 20px',
@@ -682,7 +681,6 @@ export default function BodyComponent() {
                   >
                     Login to Create Tickets
                   </div>
-                </>
               ))}
 
             <SearchTextInput
