@@ -430,6 +430,7 @@ export default function WantedView(props: any) {
 
     return (
       <>
+
         {paid && (
           <Img
             src={'/static/paid_ribbon.svg'}
