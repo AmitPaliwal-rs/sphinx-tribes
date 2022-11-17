@@ -367,7 +367,8 @@ export default function BodyComponent({ selectedWidget }) {
             width: '100%',
             display: 'flex',
             flexDirection: 'column',
-            alignItems: 'center'
+            alignItems: 'center',
+            height:'100%',
           }}>
           <WidgetSwitchViewer
             onPanelClick={(person, item) => {
@@ -476,7 +477,7 @@ export default function BodyComponent({ selectedWidget }) {
           </div>
 
           {showDropdown && <Backdrop onClick={() => setShowDropdown(false)} />}
-          <div style={{ width: '100%' }}>
+          <div style={{ width: '100%'}}>
             <PageLoadSpinner show={loadingTop} />
             {listContent}
             <PageLoadSpinner noAnimate show={loadingBottom} />
@@ -615,7 +616,7 @@ export default function BodyComponent({ selectedWidget }) {
               height: '100%',
               justifyContent: 'flex-start',
               alignItems: 'flex-start',
-              padding: '0px 20px 20px 20px'
+              padding: '0px 20px 20px 20px',
             }}>
             <PageLoadSpinner show={loadingTop} />
             {listContent}
